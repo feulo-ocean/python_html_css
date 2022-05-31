@@ -1,0 +1,14 @@
+{% extends "layout.html"%}
+
+{% block corpo %}
+<ul>
+    {% for entrada in entradas %}
+    <li> 
+        <h2>{{ entrada.titulo }}</h2>
+        {{ entrada.titulo }}
+    </li>
+    {% else %}
+        <li> <em>Nossa, você ainda não possui nenhuma entrada! </em> </li>
+    {% endfor %}
+</ul>
+{% endblock %}
