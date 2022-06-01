@@ -1,15 +1,15 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="static/estilo.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo.css') }}">
     </head>
     <body>
         <div class="pagina">
             <h1>Meu Blog</h1>
             <div class="metanav">
                 {% if not session.logado %}
-                    <a href="/login">login</a>
+                    <a href="{{ url_for('login')}}">login</a>
                 {% else %}
-                    <a href="/logout">logout</a>
+                    <a href="{{url_for('logout')}}">logout</a>
                 {% endif %}  
             </div>
             {% for mensagem in get_flashed_messages() %}

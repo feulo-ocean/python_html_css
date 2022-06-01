@@ -1,7 +1,21 @@
 {% extends "layout.html"%}
 
 {% block corpo %}
-<ul>
+{%if session.logado%}
+    <form action="{{ url_for('inserir_entradas')}}" method="POST"
+    class="ins-entrada">
+        <dl>
+            <dt>Título: 
+                <dd><input type="text" name="titulo" size="30"></dd>
+            </dt>
+            <dt> Texto:
+                <dd><textarea name="texto" rows="5" cols="40"></textarea></dd>
+                <dd><input type="submit" value="Publicar"></dd>
+            </dt>
+        </dl>
+    </form>
+{% endif%}
+<ul class="entradas">
     {% for entrada in entradas %}
     <li> 
         <h2>{{ entrada.titulo }}</h2>

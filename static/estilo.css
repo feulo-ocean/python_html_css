@@ -22,3 +22,33 @@ h2{
     padding: 0.8em;
     background-color: white;
 }
+
+.metanav{
+    text-align: right;
+    font-size: 0.8em;
+    padding: 0.3em;
+    margin-bottom: 3em;
+    background-color: #fafafa;
+}
+
+.flash{
+    background-color: #CEE5F5;
+    padding: 0.5em;
+    border: 1px solid #AACBE2;
+}
+
+.erro{
+    background-color: #F0D6D6;
+    padding: 0.5em;
+}
+
+.ins-entrada{
+    font-size: 0.9em;
+    border-bottom: 1px solid #ccc;
+}
+.ins-entrada dl{
+    font-weight: bold;
+}
+.entradas       { list-style: none; margin: 0; padding: 0; }
+.entradas li    { margin: 0.8em 1.2em; }
+.entradas li h2 { margin-left: -1em; }
